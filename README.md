@@ -91,9 +91,9 @@ The consumer also can use the library by loading it via a script tag:
 
 
 ## TODO 
-* Tests 
-* import class
-* ES6 functiom syntax
+* Tests  
+* ES6 function syntax
+* folder in package.json lib
  
 
 ## Running tests

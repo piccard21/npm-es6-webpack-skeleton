@@ -4,7 +4,7 @@
  const libraryVarName = 'npmEs6WebpackSkeleton';
  module.exports = {
      entry: {
-         app: './src/index.js'
+         app: path.resolve(__dirname, 'src', 'index.js'),
      },
      plugins: [
          new CleanWebpackPlugin(['dist']),
@@ -29,9 +29,6 @@
                      presets: ['env']
                  }
              }
-         }, {
-             test: /\.css$/,
-             use: ['style-loader', 'css-loader']
          }]
      }
  };

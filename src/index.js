@@ -1,5 +1,4 @@
-  import _ from 'lodash';
-  import './template/style.css';
+  import _ from 'lodash'; 
   import printMe from './print.js';
   import {
       cube
@@ -10,7 +9,7 @@
   if (process.env.NODE_ENV !== 'production') {
       console.log('Looks like we are in development mode!');
   }
-
+  
   // make this accessable
   export function hello() {
       return _.join(['Hello', 'world'], ' ');
@@ -22,8 +21,13 @@
   export function printConsole() {
       printMe();
   };
-  export const point = new pointClass.Point(21, 2222, );
-  export const colorpoint = new pointClass.ColorPoint(5, 10, 'red');
+  export const point = new pointClass.Point();
+  export const colorpoint = new pointClass.ColorPoint();
+
+  
+  export function numFormatter(number, locale) {
+      return number.toLocaleString(locale);
+  };
   // function component1() {
   //     var element = document.createElement('div');
   //     var btn = document.createElement('button');
