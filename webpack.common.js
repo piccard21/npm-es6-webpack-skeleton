@@ -9,14 +9,26 @@
      plugins: [
          new CleanWebpackPlugin(['dist']),
          new HtmlWebpackPlugin({
-            title: 'npm-es6-webpack-skeleton',
-            template: path.resolve(__dirname, 'src', 'index.ejs'),
-        })
+             title: 'npm-es6-webpack-skeleton',
+             template: path.resolve(__dirname, 'src', 'index.ejs'),
+         })
      ],
      output: {
          path: path.resolve(__dirname, 'dist'),
          filename: 'app.js',
          library: libraryName,
          libraryTarget: 'umd'
+     },
+     module: {
+         rules: [{
+             test: /\.js$/,
+             exclude: /(node_modules|bower_components)/,
+             use: {
+                 loader: 'babel-loader',
+                 options: {
+                     presets: ['env']
+                 }
+             }
+         }]
      }
  };

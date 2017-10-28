@@ -23,6 +23,7 @@ $ npm i npm-es6-webpack-skeleton --save
 * sourcemap is created (inline in dev-mode)
 * external library-dependency 
 	* this means that your library expects a dependency, here named **lodash**, to be available in the consumer's environment. 
+* Babel for converting ES6
 
 ## Access 
 This package is bundled in a way that will achieve the following goals:
