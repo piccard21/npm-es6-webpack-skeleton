@@ -1,7 +1,7 @@
  const path = require('path');
  const CleanWebpackPlugin = require('clean-webpack-plugin');
  const HtmlWebpackPlugin = require('html-webpack-plugin');
- const libraryName = 'npmEs6WebpackSkeleton';
+ const libraryVarName = 'npmEs6WebpackSkeleton';
  module.exports = {
      entry: {
          app: './src/index.js'
@@ -10,13 +10,13 @@
          new CleanWebpackPlugin(['dist']),
          new HtmlWebpackPlugin({
              title: 'npm-es6-webpack-skeleton',
-             template: path.resolve(__dirname, 'src', 'index.ejs'),
+             template: path.resolve(__dirname, 'src/template', 'index.ejs'),
          })
      ],
      output: {
          path: path.resolve(__dirname, 'dist'),
          filename: 'app.js',
-         library: libraryName,
+         library: libraryVarName,
          libraryTarget: 'umd'
      },
      module: {
@@ -29,6 +29,9 @@
                      presets: ['env']
                  }
              }
+         }, {
+             test: /\.css$/,
+             use: ['style-loader', 'css-loader']
          }]
      }
  };

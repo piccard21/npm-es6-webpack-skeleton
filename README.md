@@ -19,10 +19,9 @@ $ npm i npm-es6-webpack-skeleton --save
 	* Hot module replacement
 	* index.html automatically created
 	* use of a template 
+		* modify **index.ejs** for yuo needs
 * clean dist-directory before recompiling
 * sourcemap is created (inline in dev-mode)
-* external library-dependency 
-	* this means that your library expects a dependency, here named **lodash**, to be available in the consumer's environment. 
 * Babel for converting ES6
 
 ## Access 
@@ -91,12 +90,10 @@ The consumer also can use the library by loading it via a script tag:
   * **test** - ...
 
 
-## TODO
-* css für dev-server
-	* dev-server eigene config????
-	* Variablen für server?
-* Tests
-* Babel 
+## TODO 
+* Tests 
+* import class
+* ES6 functiom syntax
  
 
 ## Running tests
