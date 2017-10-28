@@ -6,9 +6,17 @@ A skeleton for developing npm-modules in ES6 by using webpack with babel-loader.
 
 Install with [npm](https://www.npmjs.com/)
 
+## Usage
 ```sh
-$ npm i npm-es6-webpack-skeleton --save
-```  
+    npm init -y 
+    npm i npm-es6-webpack-skeleton 
+    mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
+    cd PLACE/WHER/YOU/WANT/IT
+    vim package.json
+    npm install
+ ```   
+
+
 
 ## Features
 
@@ -19,7 +27,7 @@ $ npm i npm-es6-webpack-skeleton --save
 	* Hot module replacement
 	* index.html automatically created
 	* use of a template 
-		* modify **index.ejs** for yuo needs
+		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
 * sourcemap is created (inline in dev-mode)
 * Babel for converting ES6
@@ -94,6 +102,8 @@ The consumer also can use the library by loading it via a script tag:
 * Tests  
 * ES6 function syntax
 * folder in package.json lib
+* Readme wie in Artikel
+* 
  
 
 ## Running tests
