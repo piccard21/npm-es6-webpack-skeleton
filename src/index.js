@@ -4,6 +4,11 @@
       cube
   } from './math.js';
 
+  
+  if (process.env.NODE_ENV !== 'production') {
+      console.log('Looks like we are in development mode!');
+  }
+
   function component1() {
       var element = document.createElement('div');
       var btn = document.createElement('button');
@@ -16,7 +21,7 @@
 
   function component2() {
       var element = document.createElement('pre');
-      element.innerHTML = ['Hello webpack!', '5 cubed is equal to '+ cube(5)].join('\n\n');
+      element.innerHTML = ['Hello webpack!', '5 cubed is equal to ' + cube(5)].join('\n\n');
       return element;
   }
   document.body.appendChild(component1());
