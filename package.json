@@ -2,14 +2,14 @@
   "name": "npm-es6-webpack-skeleton",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch --config webpack.dev.js",
     "start": "webpack-dev-server --open --config webpack.dev.js"
   },
-  "keywords": [],
+  "keywords": ["npm", "node", "webpack", "es6", "webpack", "skeleton"],
   "author": "Andreas Stephan <piccard@web.de> (cafe-serendipity.com)",
   "license": "MIT",
   "devDependencies": {
@@ -18,5 +18,8 @@
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3",
     "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
   }
 }
