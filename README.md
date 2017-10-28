@@ -40,10 +40,10 @@ Also, the consumer should be able to access the library the following ways:
 ## Script
 
 * npm run
-  * *start* - bring up the development server. A index.html will be automatically created, where you are able to modify the template to your needs. The server is reachable at *localhost:8080*
-  * *watch* - watch the src-directory
-  * *build* - create dist/app.js in a minified version, where tree-shaking is triggered as well 
-  * *test* - ...
+  * **start** - bring up the development server. A index.html will be automatically created, where you are able to modify the template to your needs. The server is reachable at *localhost:8080*
+  * **watch** - watch the src-directory
+  * **build** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
+  * **test** - ...
 
 
 ## TODO
