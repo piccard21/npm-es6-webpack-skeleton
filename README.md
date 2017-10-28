@@ -91,6 +91,9 @@ The consumer also can use the library by loading it via a script tag:
 </html>
 ```
 
+https://webpack.js.org/configuration/output/#output-librarytarget
+
+
 ## Script
 
 * npm run
