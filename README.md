@@ -48,13 +48,6 @@ Also, the consumer should be able to access the library the following ways:
 * **CommonJS module**. i.e. require('npm-es6-webpack-skeleton').
 * **Global variable** when included through script tag.
 
-You can expose the library in the following ways, by modifying the **[libraryTarget](https://webpack.js.org/configuration/output/#output-librarytarget)** in **webpack.common.js**:
-
-* **Variable**: as a global variable made available by a script tag (libraryTarget:'var').
-* **This**: available through the this object (libraryTarget:'this').
-* **Window**: available trough the window object, in the browser (libraryTarget:'window').
-* **UMD**: available after AMD or CommonJS require (libraryTarget:'umd'). This is the default in the package.
-
 The usage specification for the library use will be as follows:
 
 ```
