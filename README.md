@@ -13,11 +13,11 @@ Install with [npm](https://www.npmjs.com/)
     npm init -y 
     npm i npm-es6-webpack-skeleton 
     mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
-    cd PLACE/WHER/YOU/WANT/IT
+    cd /WHERE/EVER/YOU/WANT/IT
+    mv package.json.example package.json
     vim package.json
     npm install
  ```   
-
 
 
 ## Features
@@ -31,8 +31,9 @@ Install with [npm](https://www.npmjs.com/)
 	* use of a template 
 		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
-* sourcemap is created (inline in dev-mode)
+* sourcemap (inline in dev-mode)
 * Babel for converting ES6
+
 
 ## Access 
 This package is bundled in a way that will achieve the following goals:
@@ -43,34 +44,29 @@ This package is bundled in a way that will achieve the following goals:
 
 Also, the consumer should be able to access the library the following ways:
 
-* **ES2015 module**. i.e. import npmEs6WebpackSkeleton from 'npm-es6-webpack-skeleton'.
+* **ES2015 module**. i.e. import * npmEs6WebpackSkeleton from 'npm-es6-webpack-skeleton'.
 * **CommonJS module**. i.e. require('npm-es6-webpack-skeleton').
 * **Global variable** when included through script tag.
-
-You can expose the library in the following ways:
-
-* **Variable**: as a global variable made available by a script tag (libraryTarget:'var').
-* **This**: available through the this object (libraryTarget:'this').
-* **Window**: available trough the window object, in the browser (libraryTarget:'window').
-* **UMD**: available after AMD or CommonJS require (libraryTarget:'umd').
 
 The usage specification for the library use will be as follows:
 
 ```
 // ES2015 module import
 import * as npmEs6WebpackSkeleton from 'npm-es6-webpack-skeleton';
+
 // CommonJS module require
 var npmEs6WebpackSkeleton = require('npm-es6-webpack-skeleton');
-// ...
+```
+
+
+``` 
 // ES2015 and CommonJS module use
 npmEs6WebpackSkeleton.wordToNum('Two');
-// ...
+ 
 // AMD module require
-require(['npmEs6WebpackSkeleton'], function ( npmEs6WebpackSkeleton) {
-  // ...
+require(['npmEs6WebpackSkeleton'], function (npmEs6WebpackSkeleton) {
   // AMD module use
   npmEs6WebpackSkeleton.wordToNum('Two');
-  // ...
 });
 ```
 
@@ -91,21 +87,14 @@ The consumer also can use the library by loading it via a script tag:
 </html>
 ```
 
-## Script
+
+## Scripts
 
 * npm run
-  * **start** - bring up the development server. A index.html will be automatically created, where you are able to modify the template to your needs. The server is reachable at *localhost:8080*
+  * **start** - bring up the development server. A index.html is automatically created, where you are able to modify the template to your needs. The server is reachable at *localhost:8080*
   * **watch** - watch the src-directory
   * **build** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
-  * **test** - ...
-
-
-## TODO 
-* Tests  
-* ES6 function syntax
-* folder in package.json lib
-* Readme wie in Artikel
-* 
+  * **test** - mocha & chai tests 
  
 
 ## Running tests
