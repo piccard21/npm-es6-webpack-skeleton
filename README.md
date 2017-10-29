@@ -13,7 +13,7 @@ Install with [npm](https://www.npmjs.com/)
     npm init -y 
     npm i npm-es6-webpack-skeleton 
     mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
-    cd PLACE/IT/WHEREVER/YOU/WANT
+    cd /WHERE/EVER/YOU/WANT/IT
     mv package.json.example package.json
     vim package.json
     npm install
