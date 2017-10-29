@@ -56,3 +56,8 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# other
+.DS_STORE
+*.sublime-project
+*.sublime-workspace
