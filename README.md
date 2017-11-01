@@ -36,7 +36,7 @@ Also, the consumer should be able to access the library the following ways:
 
 * **ES2015 module**
 * **CommonJS module**
-* **Global variable** when included through script tag.
+* **Global variable**, when included through script tag.
 
 ## Usage
 
