@@ -19,7 +19,7 @@ Install with [npm](https://www.npmjs.com/)
 	* use of a template 
 		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
-* sourcemap (inline in dev-mode)
+* sourcemap
 * Babel for converting ES6
 
 
