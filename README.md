@@ -10,7 +10,7 @@ Install with [npm](https://www.npmjs.com/)
 
 ## Features
 
-* Production & Development mode
+* Production, development & development-server mode
 * Minifying
 	* Tree-Shaking
 * Hot development-server
@@ -27,13 +27,15 @@ Install with [npm](https://www.npmjs.com/)
 This package is bundled in a way that will achieve the following goals:
  
 * Setting the library name as **npm-es6-webpack-skeleton**.
+  * chane the name in package.json
 * Exposing the library as a variable called **npmEs6WebpackSkeleton**.
+  * change the var-name **libraryVarName** in webpack.common.js
 * Being able to access the library inside **Node.js**.
 
 Also, the consumer should be able to access the library the following ways:
 
 * **ES2015 module**
-* **CommonJS module
+* **CommonJS module**
 * **Global variable** when included through script tag.
 
 ## Usage
