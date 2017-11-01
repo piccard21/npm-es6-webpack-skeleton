@@ -19,7 +19,7 @@ Install with [npm](https://www.npmjs.com/)
 	* use of a template 
 		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
-* sourcemap (inline in dev-mode)
+* sourcemap
 * Babel for converting ES6
 
 
@@ -43,21 +43,21 @@ Also, the consumer should be able to access the library the following ways:
 ### Setup your module-skeleton
 
 ```sh
-    npm init -y 
-    npm i npm-es6-webpack-skeleton 
-    mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
-    cd /WHERE/EVER/YOU/WANT/IT
-    mv package.json.example package.json
-    vim package.json
-    npm i -D
+npm init -y 
+npm i npm-es6-webpack-skeleton 
+mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
+cd /WHERE/EVER/YOU/WANT/IT
+mv package.json.example package.json
+vim package.json
+npm i -D
  ```   
 
-The module already works out of the box, so you can link it easily to an application, which will use the module
+The module already works out of the box, so you can link it easily to an application, without publishing it:
 
 ```sh
 cd /WHERE/EVER/YOU/WANT/IT
 npm link
-cd /PROJECT/WHICH/WILL/USE/THEMODULE
+cd /PROJECT/WHICH/WILL/USE/THE/MODULE
 npm link NAME-OF-YOUR-MODULE
 ```
 
@@ -65,7 +65,7 @@ npm link NAME-OF-YOUR-MODULE
 
 ```
 // ES2015 module import
-import theDefault, * as ns  from 'npm-es6-webpack-skeleton';
+import theDefault, * as ns from 'npm-es6-webpack-skeleton';
 
 // CommonJS module require
 var ns = require('npm-es6-webpack-skeleton');
