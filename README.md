@@ -65,7 +65,7 @@ npm link NAME-OF-YOUR-MODULE
 
 ```
 // ES2015 module import
-import theDefault, * as ns  from 'npm-es6-webpack-skeleton';
+import theDefault, * as ns from 'npm-es6-webpack-skeleton';
 
 // CommonJS module require
 var ns = require('npm-es6-webpack-skeleton');
