@@ -1,7 +1,6 @@
  const path = require('path');
  const CleanWebpackPlugin = require('clean-webpack-plugin');
  const libraryVarName = 'npmEs6WebpackSkeleton';
- // see https://webpack.js.org/configuration/output/#output-librarytarget for your export-possibilities
  const libraryTarget = 'umd';
  module.exports = {
      entry: {

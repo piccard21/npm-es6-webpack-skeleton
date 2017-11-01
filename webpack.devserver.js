@@ -10,9 +10,15 @@
          hot: true
      },
      plugins: [
+         new HtmlWebpackPlugin({
+             title: 'npm-es6-webpack-skeleton',
+             template: path.resolve(__dirname, 'src/template', 'index.ejs'),
+         }),
+         new webpack.NamedModulesPlugin(),
+         new webpack.HotModuleReplacementPlugin(),
          new webpack.DefinePlugin({
              'process.env': {
-                 'NODE_ENV': JSON.stringify('development')
+                 'NODE_ENV': JSON.stringify('dev-server')
              }
          })
      ]

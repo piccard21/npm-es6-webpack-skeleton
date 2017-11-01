@@ -8,18 +8,6 @@ A skeleton for developing npm-modules in ES6 by using webpack with babel-loader.
 
 Install with [npm](https://www.npmjs.com/)
 
-## Usage
-```sh
-    npm init -y 
-    npm i npm-es6-webpack-skeleton 
-    mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
-    cd /WHERE/EVER/YOU/WANT/IT
-    mv package.json.example package.json
-    vim package.json
-    npm install
- ```   
-
-
 ## Features
 
 * Production & Development mode
@@ -44,30 +32,71 @@ This package is bundled in a way that will achieve the following goals:
 
 Also, the consumer should be able to access the library the following ways:
 
-* **ES2015 module**. i.e. import * npmEs6WebpackSkeleton from 'npm-es6-webpack-skeleton'.
-* **CommonJS module**. i.e. require('npm-es6-webpack-skeleton').
+* **ES2015 module**
+* **CommonJS module
 * **Global variable** when included through script tag.
 
-The usage specification for the library use will be as follows:
+## Usage
+
+### Setup your module-skeleton
+
+```sh
+    npm init -y 
+    npm i npm-es6-webpack-skeleton 
+    mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
+    cd /WHERE/EVER/YOU/WANT/IT
+    mv package.json.example package.json
+    vim package.json
+    npm i -D
+ ```   
+
+The module already works out of the box, so you can link it easily to an application, which will use the module
+
+```sh
+cd /WHERE/EVER/YOU/WANT/IT
+npm link
+cd /PROJECT/WHICH/WILL/USE/THEMODULE
+npm link NAME-OF-YOUR-MODULE
+```
+
+### Import the module 
 
 ```
 // ES2015 module import
-import * as npmEs6WebpackSkeleton from 'npm-es6-webpack-skeleton';
+import theDefault, * as ns  from 'npm-es6-webpack-skeleton';
 
 // CommonJS module require
-var npmEs6WebpackSkeleton = require('npm-es6-webpack-skeleton');
+var ns = require('npm-es6-webpack-skeleton');
 ```
 
+... and use it
 
 ``` 
-// ES2015 and CommonJS module use
-npmEs6WebpackSkeleton.wordToNum('Two');
+console.info("theDefault", theDefault());
+console.info("ns.hello", ns.hello());
+console.info("ns.print", ns.print());
+console.info("ns.numFormatter", ns.numFormatter(21)); 
  
-// AMD module require
-require(['npmEs6WebpackSkeleton'], function (npmEs6WebpackSkeleton) {
-  // AMD module use
-  npmEs6WebpackSkeleton.wordToNum('Two');
-});
+// math
+console.log("ns.math.sqrt",ns.math.sqrt(9)); 
+console.log("ns.math.square", ns.math.square(11)); 
+console.log("ns.math.cube", ns.math.cube(11));
+console.log("ns.math.diag", ns.math.diag(4, 3));
+
+
+// mathSelection
+console.log("ns.mathSelection.square", ns.mathSelection.square(21)); 
+console.log("ns.mathSelection.cube", ns.mathSelection.cube(11));
+console.log("ns.mathSelection.diag", ns.mathSelection.diag(11,22));
+
+
+// pointLib
+const point = new ns.point.Point();
+const colorpoint = new ns.point.ColorPoint();
+point.create(11,22)
+colorpoint.create(55,88, "red");
+console.log("point", point.toString());
+console.log("colorpoint", colorpoint.toString());
 ```
 
 The consumer also can use the library by loading it via a script tag:
@@ -75,13 +104,13 @@ The consumer also can use the library by loading it via a script tag:
 ```
 <html>
 ...
-<script src="https://unpkg.com/npm-es6-webpack-skeleton"></script>
+<script src="node_modules/npm-es6-webpack-skeleton/dist/app.js"></script>
 <script>
   // ...
   // Global variable
-  npmEs6WebpackSkeleton.cube(5)
+  npmEs6WebpackSkeleton.hello()
   // Property in the window object
-  window.npmEs6WebpackSkeleton.printMe()
+  window.npmEs6WebpackSkeleton.print()
   // ...
 </script>
 </html>
@@ -92,7 +121,8 @@ The consumer also can use the library by loading it via a script tag:
 
 * npm run
   * **start** - bring up the development server. A index.html is automatically created, where you are able to modify the template to your needs. The server is reachable at *localhost:8080*
-  * **watch** - watch the src-directory
+  * **dev** - watch the src-directory
+  * **watch** - no minimize & postcss
   * **build** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
   * **test** - mocha & chai tests 
  
@@ -108,11 +138,9 @@ $ npm i -d && npm test
 
 ## Author
 
-**Andreas Stephan**
-
-+ [github/piccard21](https://github.com/piccard21) 
+**Andreas Stephan** 
 
 ## License
 
-Copyright © 2017 [Andreas Stephan](https://github.com/piccard21)
+Copyright © 2017 [Andreas Stephan](https://cafe-serendipity.com)
 Released under the MIT license. 

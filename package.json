@@ -6,8 +6,9 @@
     "scripts": {
         "test": "mocha --reporter spec",
         "build": "webpack --config webpack.prod.js",
+        "dev": "webpack --config webpack.dev.js",
         "watch": "webpack --watch --config webpack.dev.js",
-        "start": "webpack-dev-server --open --config webpack.dev.js"
+        "start": "webpack-dev-server --open --config webpack.devserver.js"
     },
     "keywords": ["npm", "node", "webpack", "es6", "webpack", "skeleton"],
     "author": "Andreas Stephan <info@cafe-serendipity.com> (cafe-serendipity.com)",
