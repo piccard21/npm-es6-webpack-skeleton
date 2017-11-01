@@ -52,12 +52,12 @@ vim package.json
 npm i -D
  ```   
 
-The module already works out of the box, so you can link it easily to an application, which will use the module
+The module already works out of the box, so you can link it easily to an application, without publishing it:
 
 ```sh
 cd /WHERE/EVER/YOU/WANT/IT
 npm link
-cd /PROJECT/WHICH/WILL/USE/THEMODULE
+cd /PROJECT/WHICH/WILL/USE/THE/MODULE
 npm link NAME-OF-YOUR-MODULE
 ```
 
