@@ -43,13 +43,13 @@ Also, the consumer should be able to access the library the following ways:
 ### Setup your module-skeleton
 
 ```sh
-    npm init -y 
-    npm i npm-es6-webpack-skeleton 
-    mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
-    cd /WHERE/EVER/YOU/WANT/IT
-    mv package.json.example package.json
-    vim package.json
-    npm i -D
+npm init -y 
+npm i npm-es6-webpack-skeleton 
+mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
+cd /WHERE/EVER/YOU/WANT/IT
+mv package.json.example package.json
+vim package.json
+npm i -D
  ```   
 
 The module already works out of the box, so you can link it easily to an application, which will use the module
