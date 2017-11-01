@@ -122,8 +122,8 @@ The consumer also can use the library by loading it via a script tag:
 ## Scripts
 
 * npm run
-  * **start** - bring up the development server. A index.html is automatically created, where you are able to modify the template to your needs. The server is reachable at *localhost:8080*
-  * **dev** - no minimize & postcss
+  * **start** - bring up the development server, where an index.html is automatically created. Modify the template, which you will find in **src/template/index.ejs**, so it fits your needs. The server is reachable under *localhost:8080*
+  * **dev** - create dist/app.js, not minimized
   * **watch** - watch the src-directory
   * **build** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
   * **test** - mocha & chai tests 
