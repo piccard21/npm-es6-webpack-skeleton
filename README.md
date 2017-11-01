@@ -28,7 +28,7 @@ This package is bundled in a way that will achieve the following goals:
  
 * Setting the library name as **npm-es6-webpack-skeleton**.
   * change the name in package.json
-* Exposing the library as a variable called **npmEs6WebpackSkeleton**.
+* Exposing the library as a variable  **npmEs6WebpackSkeleton**.
   * change the constant **libraryVarName** in webpack.common.js
 * Being able to access the library inside **Node.js**.
 
@@ -123,8 +123,8 @@ The consumer also can use the library by loading it via a script tag:
 
 * npm run
   * **start** - bring up the development server. A index.html is automatically created, where you are able to modify the template to your needs. The server is reachable at *localhost:8080*
-  * **dev** - watch the src-directory
-  * **watch** - no minimize & postcss
+  * **dev** - no minimize & postcss
+  * **watch** - watch the src-directory
   * **build** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
   * **test** - mocha & chai tests 
  
