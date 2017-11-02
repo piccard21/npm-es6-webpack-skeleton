@@ -5,10 +5,10 @@
   "main": "dist/app.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "build": "webpack --config webpack.prod.js",
-    "dev": "webpack --config webpack.dev.js",
-    "watch": "webpack --watch --config webpack.dev.js",
-    "start": "webpack-dev-server --open --config webpack.devserver.js"
+    "build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config  webpack.prod.js",
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config webpack.dev.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config webpack.dev.js",
+    "start": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --open --config webpack.devserver.js"
   },
   "keywords": [
     "npm",
@@ -26,8 +26,13 @@
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "clean-webpack-plugin": "^0.1.17",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "mocha": "^4.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3",
     "webpack-merge": "^4.1.0"
