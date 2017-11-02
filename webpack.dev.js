@@ -3,21 +3,12 @@
  const common = require('./webpack.common.js');
  const HtmlWebpackPlugin = require('html-webpack-plugin');
  const webpack = require('webpack');
-
-console.info("----",process.env.NODE_ENV);
+ const CleanWebpackPlugin = require('clean-webpack-plugin');
+ 
 
 
  module.exports = merge(common, {
-     devtool: 'inline-source-map',
-     devServer: {
-         contentBase: './dist',
-         hot: true
-     },
      plugins: [
-         new webpack.DefinePlugin({
-             'process.env': {
-                 'NODE_ENV': JSON.stringify('development')
-             }
-         })
+         new CleanWebpackPlugin(['dist']),
      ]
  });

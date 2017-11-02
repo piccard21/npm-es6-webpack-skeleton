@@ -1,47 +1,60 @@
- const webpack = require('webpack');
+ // const webpack = require('webpack');
  const merge = require('webpack-merge');
  const path = require('path');
 
  const ExtractTextPlugin = require("extract-text-webpack-plugin");
  const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
- const common = require('./webpack.common.js'); 
+ const common = require('./webpack.common.js');
 
  const libraryVarName = 'npmEs6WebpackSkeleton';
  const libraryTarget = 'umd';
 
  const extractCSSMIN = new ExtractTextPlugin({
-     filename: 'app.min.css',
+     filename: '[name].css',
      allChunks: true
  });
 
- const multi = require("multi-loader");
 
-
- 
-
-
- module.exports = merge(common, {
-     // devtool: 'source-map',
+ module.exports = {
+     devtool: 'source-map',
+     entry: { 
+         "app.min": path.resolve(__dirname, 'src', 'index.js')
+     },
+     output: {
+         path: path.resolve(__dirname, 'dist'),
+         filename: '[name].js',
+         library: libraryVarName,
+         libraryTarget: libraryTarget
+     },
      plugins: [
          extractCSSMIN,
          new UglifyJSPlugin({
-             include: /\.min\.js$/,
-             sourceMap: true,
-             // minimize: true
-         }),
-         new webpack.DefinePlugin({
-             'process.env': {
-                 'NODE_ENV': JSON.stringify('production')
-             }
+             include: /\.js$/,
+             sourceMap: true
          })
      ],
      module: {
-         rules: [{ 
-             // test: /\.scss$/i,
-             // include: path.resolve(__dirname, 'src/sass'),
-             // use: extractCSSMIN.extract(['css-loader', 'sass-loader'])
-         // }, {
+         rules: [{
+             test: /\.js$/,
+             exclude: /(node_modules|bower_components)/,
+             use: {
+                 loader: 'babel-loader',
+                 options: {
+                     presets: ['env']
+                 }
+             }
+         }, {
+           test: /\.scss$/i,
+             include: path.resolve(__dirname, 'src/sass'),
+             use: extractCSSMIN.extract([{
+                 loader: 'css-loader',
+                 options: {
+                     minimize: true,
+                     // importLoaders: 1
+                 }
+             }, 'sass-loader'])
+         }, {
              test: /\.css$/i,
              include: path.resolve(__dirname, 'src/css'),
              use: extractCSSMIN.extract([{
@@ -53,7 +66,6 @@
              }])
          }]
      }
- });
-
-
-console.info(module.exports.module.rules);
+ };
+ console.dir(module.exports);
+ console.dir(module.exports.module.rules);

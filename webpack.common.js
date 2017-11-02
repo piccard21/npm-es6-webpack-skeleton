@@ -1,19 +1,28 @@
  const path = require('path');
- const CleanWebpackPlugin = require('clean-webpack-plugin');
+
  const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
  const libraryVarName = 'npmEs6WebpackSkeleton';
  const libraryTarget = 'umd';
+
  const extractCSS = new ExtractTextPlugin({
-     filename: 'app.css',
+     filename: '[name].css',
      allChunks: true
  });
+
  module.exports = {
-     entry: {
-         "app": path.resolve(__dirname, 'src', 'index.js'),
-         "app.min": path.resolve(__dirname, 'src', 'index.js'),
+     externals: {
+         lodash: {
+             commonjs: 'lodash',
+             commonjs2: 'lodash',
+             amd: 'lodash',
+             root: '_'
+         }
      },
-     plugins: [
-         new CleanWebpackPlugin(['dist']),
+     entry: {
+         "app": path.resolve(__dirname, 'src', 'index.js')
+     },
+     plugins: [ 
          extractCSS
      ],
      output: {
@@ -35,7 +44,13 @@
          }, {
              test: /\.scss$/i,
              include: path.resolve(__dirname, 'src/sass'),
-             use: extractCSS.extract(['css-loader', 'sass-loader'])
+             use: extractCSS.extract([{
+                 loader: 'css-loader',
+                 options: {
+                     minimize: false,
+                     // importLoaders: 1
+                 }
+             }, 'sass-loader'])
          }, {
              test: /\.css$/i,
              include: path.resolve(__dirname, 'src/css'),
