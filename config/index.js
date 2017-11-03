@@ -5,8 +5,10 @@ const {entry} = require('./entry.js')
 const {plugins} = require('./plugins.js')
 
 // general options
-// lodash is not included in the module
-// if you want it inside or not at all, delete or uncomment it
+/* 
+ lodash is not included in the module
+ if you want it inside or not at all, delete or uncomment it 
+ */
 let options = {
     externals: {
         lodash: {
