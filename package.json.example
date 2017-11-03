@@ -1,5 +1,5 @@
 {
-  "name": "npm-es6-webpack-skeleton",
+  "name": "your-package-name",
   "version": "0.0.1",
   "description": "Your description",
   "main": "dist/app.js",
