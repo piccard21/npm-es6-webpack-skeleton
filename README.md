@@ -15,21 +15,24 @@ Install with [npm](https://www.npmjs.com/)
 	* Tree-Shaking
 * Hot development-server
 	* Hot module replacement
-	* index.html automatically created
+	* index.html is automatically created
 	* use of a template 
 		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
-* sourcemap
+* configuration-file in **config/app.js**
+* sourcemap if wanted
+* postcss & cssnext
 * Babel for converting ES6
+* mocha & chai for testing
 
 
 ## Access 
 This package is bundled in a way that will achieve the following goals:
  
-* Setting the library name as **npm-es6-webpack-skeleton**.
+* Setting the library name as **npm-es6-webpack-skeleton**
   * change the name in package.json
 * Exposing the library as a variable  **npmEs6WebpackSkeleton**.
-  * change the constant **libraryVarName** in webpack.common.js
+  * change the constant **libraryVarName** in config/app.js
 * Being able to access the library inside **Node.js**.
 
 Also, the consumer should be able to access the library the following ways:
@@ -118,14 +121,13 @@ The consumer also can use the library by loading it via a script tag:
 </html>
 ```
 
-
 ## Scripts
 
 * npm run
   * **start** - bring up the development server, where an index.html is automatically created. Modify the template, which you will find in **src/template/index.ejs**, so it fits your needs. The server is reachable under *localhost:8080*
   * **dev** - create dist/app.js, not minimized
   * **watch** - watch the src-directory
-  * **build** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
+  * **prod** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
   * **test** - mocha & chai tests 
  
 

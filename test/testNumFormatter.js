@@ -2,6 +2,7 @@
 var expect = require('chai').expect;
 var npmEs6WebpackSkeleton= require('../dist/app.js');
 var numFormatter = npmEs6WebpackSkeleton.numFormatter; 
+
 describe('#numFormatter', function() {
     it('should convert single digits', function() {
         var result = numFormatter(1);
