@@ -11,7 +11,7 @@
     "watch": "cross-env NODE_ENV=DEVELOPMENT webpack --progress --hide-modules --watch",
     "prod": "npm run production",
     "production": "npm run development & cross-env NODE_ENV=PRODUCTION webpack --progress --hide-modules",
-    "start": "cross-env NODE_ENV=DEVELOPMENT-SERVER webpack-dev-server"
+    "start": "cross-env NODE_ENV=DEVELOPMENT-SERVER webpack-dev-server --open"
   },
   "keywords": [
     "npm",
