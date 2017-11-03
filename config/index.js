@@ -6,8 +6,9 @@ const {plugins} = require('./plugins.js')
 
 // general options
 /* 
- lodash is not included in the module
- if you want it inside or not at all, delete or uncomment it 
+ lodash is not included in the module, it's an requirement in package.json
+ if you want it inside, uncomment it
+ if you don't want it, delete it, but also from dependencies in package.json and the import statement in index.js
  */
 let options = {
     externals: {

@@ -1,24 +1,25 @@
 'use strict'
 const app = require('./app.js')
 const webpack = require('webpack');
-const plugins = [
-    app.extractCSS
-];
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const cleanWebpackPlugin = require('clean-webpack-plugin');
+const uglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const pathsToClean = ['dist'];
 const cleanOptions = {
     root: app.paths.root,
     verbose: true,
     dry: false
 }
+const plugins = [
+    app.extractCSS
+];
 
 if (app.env === 'DEVELOPMENT') {
     plugins.push(new cleanWebpackPlugin(app.paths.dist, cleanOptions));
 }
 
 if (app.env === 'PRODUCTION') {
-    let uglify = new app.uglifyJSPlugin({
+    let uglify = new uglifyJSPlugin({
         include: /\.js$/,
         sourceMap: true
     });

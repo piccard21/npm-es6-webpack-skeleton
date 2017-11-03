@@ -6,6 +6,7 @@ const entry = (app.env === 'PRODUCTION') ? {
 } : {
     "app": appPath
 };
+
 module.exports = {
     entry
 }
