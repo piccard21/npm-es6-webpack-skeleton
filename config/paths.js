@@ -6,6 +6,7 @@ const dist = path.resolve(root, 'dist');
 const src = path.resolve(root, 'src');
 const css = path.resolve(src, 'css');
 const sass = path.resolve(src, 'sass');
+
 module.exports = {
     path,
     root,

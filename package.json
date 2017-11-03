@@ -2,6 +2,7 @@
   "name": "npm-es6-webpack-skeleton",
   "version": "0.0.4",
   "description": "A simple skeleton for npm-module-development with ES6, based on webpack.",
+  "author": "Andreas Stephan <info@cafe-serendipity.com> (cafe-serendipity.com)",
   "main": "dist/app.js",
   "scripts": {
     "test": "mocha --reporter spec",
@@ -10,7 +11,7 @@
     "watch": "cross-env NODE_ENV=DEVELOPMENT webpack --progress --hide-modules --watch",
     "prod": "npm run production",
     "production": "npm run development & cross-env NODE_ENV=PRODUCTION webpack --progress --hide-modules",
-    "start": "cross-env NODE_ENV=DEVELOPMENT webpack-dev-server --open --config webpack.devserver.js"
+    "start": "cross-env NODE_ENV=DEVELOPMENT-SERVER webpack-dev-server"
   },
   "keywords": [
     "npm",
@@ -20,7 +21,6 @@
     "webpack",
     "skeleton"
   ],
-  "author": "Andreas Stephan <info@cafe-serendipity.com> (cafe-serendipity.com)",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",

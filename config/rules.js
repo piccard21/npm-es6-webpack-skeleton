@@ -1,6 +1,5 @@
 'use strict'
 const app = require('./app.js'); 
- 
 const rules = [{
     test: /\.js$/,
     exclude: /(node_modules|bower_components)/,
