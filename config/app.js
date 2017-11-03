@@ -1,7 +1,10 @@
 'use strict'
 const libraryVarName = 'npmEs6WebpackSkeleton';
 const libraryTarget = 'umd';
-const paths = require('./paths.js')
+const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
+//
+//
+const paths = require('./paths.js');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const uglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const cleanWebpackPlugin = require('clean-webpack-plugin');
@@ -18,5 +21,6 @@ module.exports = {
     cleanWebpackPlugin,
     // merge: merge,
     paths,
-    env: process.env.NODE_ENV
+    env: process.env.NODE_ENV,
+    sourcemap
 }

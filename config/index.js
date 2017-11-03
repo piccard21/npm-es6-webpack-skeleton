@@ -4,7 +4,7 @@ const {output} = require('./output.js')
 const {entry} = require('./entry.js')
 const {plugins} = require('./plugins.js')
 
-module.exports = {
+let options = {
     externals: {
         lodash: {
             commonjs: 'lodash',
@@ -12,13 +12,16 @@ module.exports = {
             amd: 'lodash',
             root: '_'
         }
-    },
-    // devtool: (app.env === 'PRODUCTION') ? 'source-map' : 'nosources-source-map',
+    }, 
     entry,
     plugins,
     output,
-    module: {rules},
+    module: {rules}
+};
+
+if (app.sourcemap) {
+   options.devtool= 'source-map';
 }
 
-
- // console.info(module.exports ); 
+module.exports=options
+console.info(module.exports ); 

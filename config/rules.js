@@ -17,9 +17,9 @@ const rules = [{
         loader: 'css-loader',
         options: {
             minimize: (app.env === 'PRODUCTION') ? true : false,
-            // importLoaders: 1
+            importLoaders: 1
         }
-    }, 'sass-loader'])
+    }, 'postcss-loader', 'sass-loader'])
 }, {
     test: /\.css$/i, 
     include: app.paths.css,
@@ -27,9 +27,9 @@ const rules = [{
         loader: 'css-loader',
         options: {
             minimize: (app.env === 'PRODUCTION') ? true : false,
-            // importLoaders: 1
-        }
-    }])
+            importLoaders: 1
+        }, 
+    }, 'postcss-loader'])
 }];
 
 module.exports = {

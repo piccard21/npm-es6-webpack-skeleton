@@ -20,6 +20,25 @@ div {
     margin-right: 150px;
     margin-left: 80px;
     background-color: lightblue;
+}/* shared/colors.css */
+/* shared/typography.css */
+/* components/Article.css */
+.article {
+  font-size: 14px
+}
+.article a {
+  color: #32c7ff;
+}
+.article p {
+  color: rgb(0, 0, 0);
+  font-family: "FF DIN", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+}
+@media (min-width: 601px) {
+  .article {
+    max-width: 30em
+  }
 }.message, .success, .error, .warning {
   border: 1px solid #ccc;
   padding: 10px;
@@ -34,7 +53,4 @@ div {
 .warning {
   border-color: yellow; }
 .box {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
   border-radius: 10px; }

@@ -7,8 +7,10 @@
     "test": "mocha --reporter spec",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=DEVELOPMENT webpack --progress --hide-modules",
+    "watch": "cross-env NODE_ENV=DEVELOPMENT webpack --progress --hide-modules --watch",
     "prod": "npm run production",
-    "production": "npm run development & cross-env NODE_ENV=PRODUCTION webpack --progress --hide-modules"
+    "production": "npm run development & cross-env NODE_ENV=PRODUCTION webpack --progress --hide-modules",
+    "start": "cross-env NODE_ENV=DEVELOPMENT webpack-dev-server --open --config webpack.devserver.js"
   },
   "keywords": [
     "npm",
@@ -32,6 +34,10 @@
     "html-webpack-plugin": "^2.30.1",
     "mocha": "^4.0.1",
     "node-sass": "^4.5.3",
+    "postcss": "^6.0.14",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.8",
     "sass-loader": "^6.0.6",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3",

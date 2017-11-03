@@ -10,7 +10,7 @@ if (app.env === 'DEVELOPMENT') {
         verbose: true,
         dry: false
     }
-    plugins.push(new app.cleanWebpackPlugin([app.paths.dist], cleanOptions));
+    plugins.push(new app.cleanWebpackPlugin(app.paths.dist, cleanOptions));
 }
 if (app.env === 'PRODUCTION') {
     const uglify = new app.uglifyJSPlugin({
