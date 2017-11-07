@@ -357,14 +357,14 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.square = square;
 exports.cube = cube;
 exports.diag = diag;
 var sqrt = exports.sqrt = Math.sqrt;
 
-function square(x) {
+var square = exports.square = function square(x) {
     return x * x;
-}
+};
+
 function cube(x) {
     return x * x * x;
 }

@@ -1,3 +1,1 @@
-export default function() {
-  return 'I get called from print.js!';
-}
+export default () => 'I get called from print.js!'; 
