@@ -117,22 +117,20 @@ __webpack_require__(8);
 
 __webpack_require__(9);
 
-__webpack_require__(10);
-
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // are we in development-mode?
-// import essential libraries
+
+
+// import some css & sass
 if (process.env.NODE_ENV !== 'production') {
     console.log('Looks like we are in development mode!');
 }
 
 // exports
-
-
-// import some css & sass
+// import essential libraries
 function hello() {
     return _lodash2.default.join(['Hello', 'world'], ' ');
 };
@@ -481,12 +479,6 @@ var ColorPoint = exports.ColorPoint = function (_Point) {
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 10 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -1,8 +1,8 @@
-p {
+#one {
     border-style: solid;
     border-left-width: 15px;
 }
-div {
+#stop {
     border: 1px solid black;
     margin-top: 100px;
     margin-bottom: 100px;

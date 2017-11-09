@@ -10,9 +10,8 @@
   --font-weight: 300;
   --line-height: 1.5;
 }
-
-/* components/Article.css */
-.article {
+ 
+.here-we-go {
   font-size: 14px;
   & a {
     color: var(--color-blue);

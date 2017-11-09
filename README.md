@@ -15,7 +15,7 @@ Install with [npm](https://www.npmjs.com/)
 	* Tree-Shaking
 * Hot development-server
 	* Hot module replacement
-	* index.html is automatically created
+	* webpage is automatically created
 	* use of a template 
 		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
@@ -24,15 +24,13 @@ Install with [npm](https://www.npmjs.com/)
 * postcss & cssnext
 * Babel for converting ES6
 * mocha & chai for testing
-
-
-## Access 
+ 
 This package is bundled in a way that will achieve the following goals:
  
 * Setting the library name as **npm-es6-webpack-skeleton**
-  * change the name in package.json
+  * change the name in **package.json**
 * Exposing the library as a variable  **npmEs6WebpackSkeleton**.
-  * change the constant **libraryVarName** in config/app.js
+  * change the constant **libraryVarName** in **config/app.js**
 * Being able to access the library inside **Node.js**.
 
 Also, the consumer should be able to access the library the following ways:
@@ -52,8 +50,66 @@ mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
 cd /WHERE/EVER/YOU/WANT/IT
 mv package.json.example package.json
 vim package.json
-npm i -D
+npm i
  ```   
+
+
+### Write your module
+
+Open **src/index.js** and begin coding. Webpack will only bundle the code you are importing, which is also the case for your css & sass files, so you have explicitly ask for it. Here's an example:
+
+```
+// import essential libraries
+import _ from 'lodash';
+import * as mathLib from './lib/math.js';
+import {
+    cube,
+    square,
+    diag as d
+} from './lib/math.js';
+import printMe from './lib/print.js';
+import * as pointLib from './lib/class.Point.js';
+
+// import some css & sass
+import './css/styles-01.css'; 
+import './css/styles-02.css'; 
+import './css/styles-03.css'; 
+import './sass/sass-01.scss';
+import './sass/sass-02.scss'; 
+
+// are we in development-mode?
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+}
+
+// exports
+export default function(x) {
+    return 'I am the default function.';
+}
+export function hello() {
+    return _.join(['Hello', 'world'], ' ');
+};
+export function print(num) {
+    return printMe();
+};
+export function numFormatter(number, locale) {
+    return number.toLocaleString(locale);
+};
+export const math = mathLib;
+export const mathSelection = {
+    cube,
+    square,
+    diag: d,
+};
+export const point = pointLib;
+```
+
+For easier development use **npm --watch** or **npm start**. The latter one starts the development-server and brings up a page, which you can modify for your needs in **src/template/index.ejs**.
+
+**npm --watch** creates the files **app.css** && **app.js** in **dist/**, whereas **npm prod** creates the minfied versions as well.
+
+
+### Import the module 
 
 The module already works out of the box, so you can link it easily to an application, without publishing it:
 
@@ -64,7 +120,7 @@ cd /PROJECT/WHICH/WILL/USE/THE/MODULE
 npm link NAME-OF-YOUR-MODULE
 ```
 
-### Import the module 
+Import ...
 
 ```
 // ES2015 module import
@@ -121,6 +177,17 @@ The consumer also can use the library by loading it via a script tag:
 </html>
 ```
 
+
+### Configuration
+
+In **config/app.js** you have some options for basic configuration, like the library's variable-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. 
+
+```
+const libraryVarName = 'npmEs6WebpackSkeleton';
+const libraryTarget = 'umd';
+const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
+```
+
 ## Scripts
 
 * npm run
@@ -136,7 +203,9 @@ The consumer also can use the library by loading it via a script tag:
 Install dev dependencies:
 
 ```sh
-$ npm i -d && npm test
+npm i 
+npm run dev
+npm test
 ```
  
 

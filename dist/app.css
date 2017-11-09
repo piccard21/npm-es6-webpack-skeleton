@@ -9,11 +9,11 @@
 
 .want {
 	color: #000;
-}p {
+}#one {
     border-style: solid;
     border-left-width: 15px;
 }
-div {
+#stop {
     border: 1px solid black;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -22,21 +22,20 @@ div {
     background-color: lightblue;
 }/* shared/colors.css */
 /* shared/typography.css */
-/* components/Article.css */
-.article {
+.here-we-go {
   font-size: 14px
 }
-.article a {
+.here-we-go a {
   color: #32c7ff;
 }
-.article p {
+.here-we-go p {
   color: rgb(0, 0, 0);
   font-family: "FF DIN", sans-serif;
   font-weight: 300;
   line-height: 1.5;
 }
 @media (min-width: 601px) {
-  .article {
+  .here-we-go {
     max-width: 30em
   }
 }.message, .success, .error, .warning {
@@ -52,5 +51,6 @@ div {
 
 .warning {
   border-color: yellow; }
+
 .box {
   border-radius: 10px; }
