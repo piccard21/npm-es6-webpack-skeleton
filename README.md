@@ -24,9 +24,7 @@ Install with [npm](https://www.npmjs.com/)
 * postcss & cssnext
 * Babel for converting ES6
 * mocha & chai for testing
-
-
-## Access 
+ 
 This package is bundled in a way that will achieve the following goals:
  
 * Setting the library name as **npm-es6-webpack-skeleton**
@@ -52,7 +50,7 @@ mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
 cd /WHERE/EVER/YOU/WANT/IT
 mv package.json.example package.json
 vim package.json
-npm i -D
+npm i
  ```   
 
 
