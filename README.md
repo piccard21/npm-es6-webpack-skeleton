@@ -30,9 +30,9 @@ Install with [npm](https://www.npmjs.com/)
 This package is bundled in a way that will achieve the following goals:
  
 * Setting the library name as **npm-es6-webpack-skeleton**
-  * change the name in package.json
+  * change the name in **package.json**
 * Exposing the library as a variable  **npmEs6WebpackSkeleton**.
-  * change the constant **libraryVarName** in config/app.js
+  * change the constant **libraryVarName** in **config/app.js**
 * Being able to access the library inside **Node.js**.
 
 Also, the consumer should be able to access the library the following ways:
