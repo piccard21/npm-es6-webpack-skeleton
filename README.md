@@ -53,6 +53,39 @@ vim package.json
 npm i
  ```   
 
+Now check if everything went ok, so bring up the webpack-dev-server, with hot-module-replacemnt enabled, which means, the bundle is notified that a change happened. Rather than a full page reload, a Hot Module Replacement runtime could then load the updated modules and inject them into a running app.
+
+ ```   
+ npm start
+ ```   
+
+An html-page should open now. If you prefer, you can also switch into development-mode:
+
+ ```   
+ npm run dev
+ ```   
+
+ ... or better
+
+ ```   
+ npm run watch
+ ```   
+
+
+
+### Configuration
+
+In **config/app.js** you have some options for basic configuration, like the library's variable-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle. If not, remove also the require statemant in **index.js** and also from your **package.json**. **htmlTitle** is the title of the development-server page.
+
+```
+const libraryVarName = 'npmEs6WebpackSkeleton';
+const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
+const htmlTitle = 'npm-es6-webpack-skeleton';
+const includeLodash = true;
+const libraryTarget = 'umd';
+```
+
+Move on to change your package-name in **package.json**. 
 
 ### Write your module
 
@@ -177,16 +210,6 @@ The consumer also can use the library by loading it via a script tag:
 </html>
 ```
 
-
-### Configuration
-
-In **config/app.js** you have some options for basic configuration, like the library's variable-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. 
-
-```
-const libraryVarName = 'npmEs6WebpackSkeleton';
-const libraryTarget = 'umd';
-const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
-```
 
 ## Scripts
 

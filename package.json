@@ -1,6 +1,6 @@
 {
   "name": "npm-es6-webpack-skeleton",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A simple skeleton for npm-module-development with ES6, based on webpack.",
   "author": "Andreas Stephan <info@cafe-serendipity.com> (cafe-serendipity.com)",
   "main": "dist/app.js",
@@ -19,13 +19,15 @@
     "webpack",
     "es6",
     "webpack",
-    "skeleton"
+    "skeleton",
+    "boilerplate"
   ],
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "chai": "^4.1.2",
     "clean-webpack-plugin": "^0.1.17",
     "cross-env": "^5.1.1",
@@ -41,9 +43,7 @@
     "sass-loader": "^6.0.6",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3",
-    "webpack-merge": "^4.1.0"
-  },
-  "dependencies": {
+    "webpack-merge": "^4.1.0",
     "lodash": "^4.17.4"
   }
 }
