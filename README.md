@@ -198,15 +198,12 @@ The consumer also can use the library by loading it via a script tag:
 ```
 <html>
 ...
-<script src="node_modules/npm-es6-webpack-skeleton/dist/app.js"></script>
-<script>
-  // ...
-  // Global variable
-  npmEs6WebpackSkeleton.hello()
-  // Property in the window object
-  window.npmEs6WebpackSkeleton.print()
-  // ...
+<script src="your-public-place/app.js"></script>
+<script> 
+  console.info(npmEs6WebpackSkeleton.hello()); 
+  console.info(window.npmEs6WebpackSkeleton.print()); 
 </script>
+...
 </html>
 ```
 
@@ -231,6 +228,8 @@ npm run dev
 npm test
 ```
  
+## Finally
+For production you can decide if your main-option in package.json will point to your minfied version. If so, change the value to **app.min.js**.
 
 ## Author
 
