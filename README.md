@@ -53,9 +53,24 @@ vim package.json
 npm i
  ```   
 
+Now check if everything went ok, so bring up the webpack-dev-server, with hot-module-replacemnt enabled, which means, the bundle is notified that a change happened. Rather than a full page reload, a Hot Module Replacement runtime could then load the updated modules and inject them into a running app.
+
+ ```   
+ npm start
+ ```   
+
+ If you prefer, you can also switch into development-mode:
+ 
+ ```   
+ npm run dev
+ ```   
+
+
+ An html-page should open now. This is the hot-development-server 
+
 ### Configuration
 
-In **config/app.js** you have some options for basic configuration, like the library's variable-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle. If not remove also the require statemant in **index.js** and also from your **package.json**. **htmlTitle** is the title of the development-server page.
+In **config/app.js** you have some options for basic configuration, like the library's variable-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle. If not, remove also the require statemant in **index.js** and also from your **package.json**. **htmlTitle** is the title of the development-server page.
 
 ```
 const libraryVarName = 'npmEs6WebpackSkeleton';
