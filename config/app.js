@@ -3,6 +3,7 @@
 const libraryVarName = 'npmEs6WebpackSkeleton';
 const libraryTarget = 'umd';
 const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
+const htmlTitle = 'busy-load';
 
 // general vars
 const paths = require('./paths.js');
