@@ -231,6 +231,8 @@ npm run dev
 npm test
 ```
  
+## Finally
+For production you can decide if your main-option in package.json will point to your minfied version. If so change the value to **app.min.js**.
 
 ## Author
 
