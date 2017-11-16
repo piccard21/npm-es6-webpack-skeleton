@@ -2,8 +2,8 @@
 // primary module-configuration
 const libraryVarName = 'npmEs6WebpackSkeleton';
 const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
-const htmlTitle = 'busy-load';
-const includeLodash = false;
+const htmlTitle = 'npm-es6-webpack-skeleton';
+const includeLodash = true;
 const libraryTarget = 'umd';
 
 // general vars

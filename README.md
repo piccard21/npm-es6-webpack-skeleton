@@ -55,14 +55,14 @@ npm i
 
 ### Configuration
 
-In **config/app.js** you have some options for basic configuration, like the library's variable-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle. If not remove also the require statemant in **index.js** and also from your **package.json**. **htmlTitle** is the title of the developmen-server page.
+In **config/app.js** you have some options for basic configuration, like the library's variable-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle. If not remove also the require statemant in **index.js** and also from your **package.json**. **htmlTitle** is the title of the development-server page.
 
 ```
 const libraryVarName = 'npmEs6WebpackSkeleton';
-const libraryTarget = 'umd';
 const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
-const includeLodash = false;
-const htmlTitle = 'busy-load';
+const htmlTitle = 'npm-es6-webpack-skeleton';
+const includeLodash = true;
+const libraryTarget = 'umd';
 ```
 
 Move on to change your package-name in **package.json**. 
