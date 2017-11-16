@@ -60,11 +60,16 @@ Now check if everything went ok, so bring up the webpack-dev-server, with hot-mo
  ```   
 
  If you prefer, you can also switch into development-mode:
- 
+
  ```   
  npm run dev
  ```   
 
+ ... or better
+
+ ```   
+ npm run watch
+ ```   
 
  An html-page should open now. This is the hot-development-server 
 
