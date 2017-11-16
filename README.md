@@ -59,7 +59,7 @@ Now check if everything went ok, so bring up the webpack-dev-server, with hot-mo
  npm start
  ```   
 
- If you prefer, you can also switch into development-mode:
+An html-page should open now. If you prefer, you can also switch into development-mode:
 
  ```   
  npm run dev
@@ -71,7 +71,7 @@ Now check if everything went ok, so bring up the webpack-dev-server, with hot-mo
  npm run watch
  ```   
 
- An html-page should open now. This is the hot-development-server 
+
 
 ### Configuration
 
