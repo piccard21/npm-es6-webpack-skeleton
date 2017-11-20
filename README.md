@@ -21,9 +21,9 @@ Install with [npm](https://www.npmjs.com/)
 * clean dist-directory before recompiling
 * configuration-file in **config/app.js**
 * if wanted enable:
-  * sourcemap 
-  * lodash
-  * polyfills
+  * create a sourcemap 
+  * include lodash
+  * use polyfills
 * postcss & cssnext
 * Babel for converting ES6
 * mocha & chai for testing
