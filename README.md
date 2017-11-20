@@ -20,7 +20,10 @@ Install with [npm](https://www.npmjs.com/)
 		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
 * configuration-file in **config/app.js**
-* sourcemap if wanted
+* enable if wanted:
+  * sourcemap 
+  * lodash
+  * polyfills
 * postcss & cssnext
 * Babel for converting ES6
 * mocha & chai for testing
