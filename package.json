@@ -1,6 +1,6 @@
 {
   "name": "npm-es6-webpack-skeleton",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "A simple skeleton for npm-module-development with ES6, based on webpack.",
   "author": "Andreas Stephan <info@cafe-serendipity.com> (cafe-serendipity.com)",
   "main": "dist/app.js",
@@ -47,7 +47,6 @@
     "postcss-loader": "^2.0.8",
     "sass-loader": "^6.0.6",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3",
-    "webpack-merge": "^4.1.0"
+    "webpack-dev-server": "^2.9.3"
   }
 }
