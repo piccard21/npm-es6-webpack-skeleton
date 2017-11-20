@@ -1,9 +1,11 @@
 'use strict'
 // primary module-configuration
 const libraryVarName = 'npmEs6WebpackSkeleton';
+const libraryFileName = 'app';
 const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
 const htmlTitle = 'npm-es6-webpack-skeleton';
 const includeLodash = true;
+const enablePolyFill = true;
 const libraryTarget = 'umd';
 
 // general vars
@@ -15,12 +17,14 @@ const extractCSS = new ExtractTextPlugin({
 });
 
 module.exports = {
-    extractCSS: extractCSS,
-    libraryVarName: libraryVarName,
-    libraryTarget: libraryTarget,
+    extractCSS,
+    libraryVarName,
+    libraryFileName,
+    libraryTarget,
     paths,
     env: process.env.NODE_ENV,
     sourcemap,
     htmlTitle,
-    includeLodash
+    includeLodash,
+    enablePolyFill
 }
