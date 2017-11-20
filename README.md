@@ -20,7 +20,7 @@ Install with [npm](https://www.npmjs.com/)
 		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
 * configuration-file in **config/app.js**
-* if wanted enable:
+* if wanted:
   * create a sourcemap 
   * include lodash
   * use polyfills
