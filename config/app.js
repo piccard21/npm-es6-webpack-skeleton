@@ -5,7 +5,7 @@ const libraryFileName = 'app';
 const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
 const htmlTitle = 'npm-es6-webpack-skeleton';
 const includeLodash = true;
-const enablePolyFill = true;
+const enablePolyFill = false;
 const libraryTarget = 'umd';
 
 // general vars
