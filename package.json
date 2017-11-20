@@ -13,6 +13,10 @@
     "production": "npm run development & cross-env NODE_ENV=PRODUCTION webpack --progress --hide-modules",
     "start": "cross-env NODE_ENV=DEVELOPMENT-SERVER webpack-dev-server --open"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piccard21/npm-es6-webpack-skeleto"
+  },
   "keywords": [
     "npm",
     "node",
