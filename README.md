@@ -229,7 +229,30 @@ npm test
 ```
  
 ## Finally
-For production you can decide if your main-option in package.json will point to your minfied version. If so, change the value to **app.min.js**.
+
+* For production you can decide if your main-option in package.json will point to your minfied version. If so, change the value to **app.min.js**.
+* if you need polyfills, 
+  * install for first **babel-polyfill**
+
+```
+npm i babel-polyfill -D
+```
+
+  * add it to your **config/entry.js**
+
+```
+const entry = (app.env === 'PRODUCTION') ? {
+    "app.min": [
+        'babel-polyfill',
+        appPath
+    ]
+} : {
+    app: [
+        'babel-polyfill',
+        appPath
+    ],
+};
+```
 
 ## Author
 
