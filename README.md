@@ -89,7 +89,7 @@ const libraryTarget = 'umd';
 ```
 
 
-A word to polyfills:
+A word on polyfills:
 
 * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
 
