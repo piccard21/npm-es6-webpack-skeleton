@@ -78,7 +78,7 @@ An html-page should open now. If you prefer, you can also switch into developmen
 
 ### Configuration
 
-In **config/app.js** you have some options for basic configuration, like the library's variable-name, output-file-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle or enable polyfills  **htmlTitle** is the title of the development-server page.
+In **config/app.js** you have some options for basic configuration, like the library's variable-name, output-file-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle or enable polyfills. **htmlTitle** is the title of the development-server page.
 
 ```
 const libraryVarName = 'npmEs6WebpackSkeleton';
