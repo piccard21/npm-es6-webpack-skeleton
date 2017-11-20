@@ -20,7 +20,10 @@ Install with [npm](https://www.npmjs.com/)
 		* modify **index.ejs** for your needs
 * clean dist-directory before recompiling
 * configuration-file in **config/app.js**
-* sourcemap if wanted
+* if wanted enable:
+  * create a sourcemap 
+  * include lodash
+  * use polyfills
 * postcss & cssnext
 * Babel for converting ES6
 * mocha & chai for testing
@@ -69,23 +72,32 @@ An html-page should open now. If you prefer, you can also switch into developmen
 
  ```   
  npm run watch
- ```   
-
-
+ ```
 
 ### Configuration
 
-In **config/app.js** you have some options for basic configuration, like the library's variable-name, if you wanna have a sourcemap or the [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle. If not, remove also the require statemant in **index.js** and also from your **package.json**. **htmlTitle** is the title of the development-server page.
+In **config/app.js** you have some options for basic configuration, like the library's variable-name, output-file-name, if you wanna have a sourcemap or your [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle or enable polyfills. **htmlTitle** is the title of the development-server page.
 
 ```
 const libraryVarName = 'npmEs6WebpackSkeleton';
+const libraryFileName = 'app';
 const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
 const htmlTitle = 'npm-es6-webpack-skeleton';
 const includeLodash = true;
+const enablePolyFill = true;
 const libraryTarget = 'umd';
 ```
 
+
+A word to polyfills:
+
+* babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
+
+* Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
+
 Move on to change your package-name in **package.json**. 
+
+
 
 ### Write your module
 
@@ -229,7 +241,8 @@ npm test
 ```
  
 ## Finally
-For production you can decide if your main-option in package.json will point to your minfied version. If so, change the value to **app.min.js**.
+
+* For production you can decide if your main-option in package.json will point to your minfied version. If so, change the value to **app.min.js**.
 
 ## Author
 
