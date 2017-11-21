@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/piccard21/npm-es6-webpack-skeleton.svg?branch=develop)](https://travis-ci.org/piccard21/npm-es6-webpack-skeleton)
+[![Build Status](https://travis-ci.org/piccard21/npm-es6-webpack-skeleton.svg?branch=master)](https://travis-ci.org/piccard21/npm-es6-webpack-skeleton)
 
 # npm-es6-webpack-skeleton
 
