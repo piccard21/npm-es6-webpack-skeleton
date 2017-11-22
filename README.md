@@ -115,7 +115,7 @@ const libraryTarget = 'umd';
 
 
 | variable   |      description     |
-|----------|:-------------:| 
+|:----------|:-------------| 
 | libraryVarName |  the public variable-name you can reach the bundle, i.e. in a script-tag  |
 | libraryFileName|    filename for the bundle   |  
 | sourcemap | output sourcefiles for js & css |
