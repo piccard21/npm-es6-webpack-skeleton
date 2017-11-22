@@ -10,14 +10,15 @@ Install with [npm](https://www.npmjs.com/)
 
 ## Features
 
-* Production, development & development-server mode
-* Minifying
+* production, development & development-server mode
+* minifying
 	* Tree-Shaking
-* Hot development-server
+* hot development-server
 	* Hot module replacement
 	* webpage is automatically created
 	* use of a template 
 		* modify **index.ejs** for your needs
+    * Bootstrap is preconfigured
 * clean dist-directory before recompiling
 * configuration-file in **config/app.js**
 * if wanted:
@@ -25,16 +26,16 @@ Install with [npm](https://www.npmjs.com/)
   * include lodash
   * use polyfills
 * postcss & cssnext
-* Babel for converting ES6
+* babel for converting ES6
 * mocha & chai for testing
  
 This package is bundled in a way that will achieve the following goals:
  
-* Setting the library name as **npm-es6-webpack-skeleton**
+* setting the library name as **npm-es6-webpack-skeleton**
   * change the name in **package.json**
-* Exposing the library as a variable  **npmEs6WebpackSkeleton**.
+* exposing the library as a variable  **npmEs6WebpackSkeleton**.
   * change the constant **libraryVarName** in **config/app.js**
-* Being able to access the library inside **Node.js**.
+* access the library inside **Node.js**.
 
 Also, the consumer should be able to access the library the following ways:
 
@@ -56,7 +57,7 @@ vim package.json
 npm i
  ```   
 
-Now check if everything went ok, so bring up the webpack-dev-server, with hot-module-replacemnt enabled, which means, the bundle is notified that a change happened. Rather than a full page reload, a Hot Module Replacement runtime could then load the updated modules and inject them into a running app.
+Now check if everything went ok, so bring up the webpack-dev-server, with hot-module-replacemnt enabled, which means, the bundle is notified when a change has happened. Rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app.
 
  ```   
  npm start
@@ -84,16 +85,21 @@ const libraryFileName = 'app';
 const sourcemap = (process.env.NODE_ENV === 'PRODUCTION') ? true : false;
 const htmlTitle = 'npm-es6-webpack-skeleton';
 const includeLodash = true;
-const enablePolyFill = true;
+const enablePolyFill = false;
 const libraryTarget = 'umd';
 ```
 
 
-A word on polyfills:
+* polyfills
+  * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
+  * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
+* lodash 
+  a really useful [utility-library](https://lodash.com/), but you don't have to include the whole thing, use cherrypicking for example
 
-* babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
-
-* Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
+```
+// Cherry-pick methods for smaller browserify/rollup/webpack bundles.
+var get = require('lodash/get');
+```
 
 Move on to change your package-name in **package.json**. 
 
@@ -239,10 +245,6 @@ npm i
 npm run dev
 npm test
 ```
- 
-## Finally
-
-* For production you can decide if your main-option in package.json will point to your minfied version. If so, change the value to **app.min.js**.
 
 ## Author
 
