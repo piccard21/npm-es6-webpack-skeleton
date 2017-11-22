@@ -114,34 +114,15 @@ const libraryTarget = 'umd';
 ```
 
 
-* libraryVarName
-    * the public variable-name you can reach the bundle, i.e. in a script-tag
-
-* libraryFileName
-    * filename for the bundle
-
-* sourcemap
-    * output sourcefiles for js & css
-
-* htmlTitle
-    * the title of the development-server page
-
-* includeLodash 
-    * a really nice [utility-library](https://lodash.com/). If set to false, webpack adds it to [externals](https://webpack.js.org/configuration/externals/)
-
-* enablePolyFill
-    * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
-    * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
-
-* libraryTarget
-    * **umd** is the default 
-    * see [here](https://webpack.js.org/guides/author-libraries/) for more information 
-
 | variable   |      description     |
 |----------|:-------------:| 
-| libraryVarName |  **umd** is the default   |
-| col 2 is |    centered   
-| col 3 is | right-aligned  |
+| libraryVarName |  the public variable-name you can reach the bundle, i.e. in a script-tag  |
+| libraryFileName|    filename for the bundle   |  
+| sourcemap | output sourcefiles for js & css |
+| htmlTitle | the title of the development-server page |
+| includeLodash | a really nice [utility-library](https://lodash.com/). If set to false, webpack adds it to [externals](https://webpack.js.org/configuration/externals/) |
+| enablePolyFill | babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign. Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6. |
+| libraryTarget | **umd** is the default. See [here](https://webpack.js.org/guides/author-libraries/) for more information  |
 
 ## Usage
 
