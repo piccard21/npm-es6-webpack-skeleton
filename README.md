@@ -127,11 +127,7 @@ const libraryTarget = 'umd';
     * the title of the development-server page
 
 * includeLodash 
-    * a really nice [utility-library](https://lodash.com/), but you don't have to import/require the whole thing, you can use cherry-picking as well
-
-```
-const get = require('lodash/get');
-```
+    * a really nice [utility-library](https://lodash.com/). If set to false, webpack adds it to [externals](https://webpack.js.org/configuration/externals/)
 
 * enablePolyFill
     * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
