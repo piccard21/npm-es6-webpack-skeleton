@@ -86,7 +86,7 @@ npm start
 
 * development-mode:
 
-```   
+```sh   
 npm run dev
 ```   
 
