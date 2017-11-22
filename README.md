@@ -143,9 +143,7 @@ import * as pointLib from './lib/class.Point.js';
 // import some css & sass
 import './css/styles-01.css'; 
 import './css/styles-02.css'; 
-import './css/styles-03.css'; 
-import './sass/sass-01.scss';
-import './sass/sass-02.scss'; 
+import './sass/sass.scss';  
 
 // are we in development-mode?
 if (process.env.NODE_ENV !== 'production') {
