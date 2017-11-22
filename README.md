@@ -95,7 +95,8 @@ const libraryTarget = 'umd';
     * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
 * lodash 
     * a really useful [utility-library](https://lodash.com/), but you don't have to include the whole thing, use cherrypicking for example
-    * ```// Cherry-pick methods for smaller browserify/rollup/webpack bundles.
+
+```
 const get = require('lodash/get');
 ```
 
