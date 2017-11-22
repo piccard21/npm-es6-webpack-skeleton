@@ -44,7 +44,7 @@ Also, the consumer should be able to access the library the following ways:
 
 You can decide how to install the skeleton, via **npm** or **git**
 
-### npm 
+### git
 
 ```sh
 git clone https://github.com/piccard21/npm-es6-webpack-skeleton.git
@@ -54,7 +54,7 @@ npm i
  ```   
 
 
-### git
+### npm 
 
 ```sh
 npm init -y 
