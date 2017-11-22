@@ -134,9 +134,14 @@ const libraryTarget = 'umd';
     * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
 
 * libraryTarget
-    * **umd** is the default: available after AMD or CommonJS require  
+    * **umd** is the default 
     * see [here](https://webpack.js.org/guides/author-libraries/) for more information 
 
+| variable   |      description     |
+|----------|:-------------:| 
+| libraryVarName |  **umd** is the default   |
+| col 2 is |    centered   
+| col 3 is | right-aligned  |
 
 ## Usage
 
