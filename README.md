@@ -4,9 +4,6 @@
 
 A skeleton for developing npm-modules in ES6 by using webpack with babel-loader.
 
-## Install
-
-Install with [npm](https://www.npmjs.com/)
 
 ## Features
 
@@ -43,7 +40,7 @@ Also, the consumer should be able to access the library the following ways:
 * **CommonJS module**
 * **Global variable**, when included through script tag.
 
-## Usage
+## Install & Usage
 
 ### Setup your module-skeleton
 
