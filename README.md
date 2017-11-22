@@ -4,9 +4,6 @@
 
 A skeleton for developing npm-modules in ES6 by using webpack with babel-loader.
 
-## Install
-
-Install with [npm](https://www.npmjs.com/)
 
 ## Features
 
@@ -43,9 +40,21 @@ Also, the consumer should be able to access the library the following ways:
 * **CommonJS module**
 * **Global variable**, when included through script tag.
 
-## Usage
+## Install
 
-### Setup your module-skeleton
+You can decide how to install the skeleton, via **npm** or **git**
+
+### git
+
+```sh
+git clone https://github.com/piccard21/npm-es6-webpack-skeleton.git
+cd npm-es6-webpack-skeleton
+mv package.json.example package.json
+npm i
+ ```   
+
+
+### npm 
 
 ```sh
 npm init -y 
@@ -53,27 +62,39 @@ npm i npm-es6-webpack-skeleton
 mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
 cd /WHERE/EVER/YOU/WANT/IT
 mv package.json.example package.json
-vim package.json
 npm i
  ```   
 
-Now check if everything went ok, so bring up the webpack-dev-server, with hot-module-replacemnt enabled, which means, the bundle is notified when a change has happened. Rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app.
 
- ```   
- npm start
- ```   
+Now check if everything went ok. Herefor you've got some possibilities:
 
-An html-page should open now. If you prefer, you can also switch into development-mode:
+* testing
 
- ```   
- npm run dev
- ```   
+```sh
+npm test
+```
+
+*  webpack-dev-server, with hot-module-replacemnt enabled
+    * an html-page should open 
+    * the bundle is notified when a change has happened.
+    * rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app
+
+```sh 
+npm start
+```   
+ 
+
+* development-mode:
+
+```   
+npm run dev
+```   
 
  ... or better
 
- ```   
- npm run watch
- ```
+```sh
+npm run watch
+```
 
 ### Configuration
 
@@ -94,15 +115,14 @@ const libraryTarget = 'umd';
     * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
     * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
 * lodash 
-    * a really useful [utility-library](https://lodash.com/), but you don't have to include the whole thing, use cherrypicking for example
+    * a really useful [utility-library](https://lodash.com/), but you don't have to include the whole thing, use cherry-picking for example
 
 ```
 const get = require('lodash/get');
 ```
 
-Move on to change your package-name in **package.json**. 
 
-
+## Usage
 
 ### Write your module
 
@@ -233,6 +253,7 @@ The consumer also can use the library by loading it via a script tag:
   * **watch** - watch the src-directory
   * **prod** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
   * **test** - mocha & chai tests 
+  * **prepublish** - run tests before publishing
  
 
 ## Running tests
