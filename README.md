@@ -42,7 +42,21 @@ Also, the consumer should be able to access the library the following ways:
 
 ## Install
 
-### Setup your module-skeleton
+You can decide how to install the skeleton, via
+
+**npm** 
+
+```sh
+git clone https://github.com/piccard21/npm-es6-webpack-skeleton.git
+cd npm-es6-webpack-skeleton
+mv package.json.example package.json
+npm i
+ ```   
+
+
+or 
+
+**git** 
 
 ```sh
 npm init -y 
@@ -50,27 +64,37 @@ npm i npm-es6-webpack-skeleton
 mv node_modules/npm-es6-webpack-skeleton /WHERE/EVER/YOU/WANT/IT
 cd /WHERE/EVER/YOU/WANT/IT
 mv package.json.example package.json
-vim package.json
 npm i
  ```   
 
-Now check if everything went ok, so bring up the webpack-dev-server, with hot-module-replacemnt enabled, which means, the bundle is notified when a change has happened. Rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app.
 
- ```   
- npm start
- ```   
+Now check if everything went ok. Herefor you've got some possibilities:
 
-An html-page should open now. If you prefer, you can also switch into development-mode:
+* testing
 
- ```   
- npm run dev
- ```   
+```sh
+npm test
+```
+
+*  webpack-dev-server, with hot-module-replacemnt enabled, which means, the bundle is notified when a change has happened. Rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app.
+
+```sh 
+npm start
+```   
+
+An html-page should open now. 
+
+* development-mode:
+
+```   
+npm run dev
+```   
 
  ... or better
 
- ```   
- npm run watch
- ```
+```sh
+npm run watch
+```
 
 ### Configuration
 
