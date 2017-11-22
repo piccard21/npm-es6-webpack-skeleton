@@ -68,15 +68,10 @@ npm i
 
 Now check if everything went ok. Herefor you've got some possibilities:
 
-* testing
-
-```sh
-npm test
-```
-
 *  webpack-dev-server, with hot-module-replacemnt enabled
     * an html-page should open 
-    * the bundle is notified when a change has happened.
+    * your bundle will be automatically injected
+    * the bundle is notified when a change has happened
     * rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app
 
 ```sh 
@@ -95,6 +90,15 @@ npm run dev
 ```sh
 npm run watch
 ```
+
+* testing 
+
+```sh
+npm run dev
+npm test
+```
+
+
 
 ### Configuration
 
