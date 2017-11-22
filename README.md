@@ -75,9 +75,9 @@ npm test
 ```
 
 *  webpack-dev-server, with hot-module-replacemnt enabled
-    * an html-page should open where 
-    * the bundle is notified when a change has happened. 
-    * rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app.
+    * an html-page should open 
+    * the bundle is notified when a change has happened.
+    * rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app
 
 ```sh 
 npm start
@@ -115,13 +115,11 @@ const libraryTarget = 'umd';
     * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
     * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
 * lodash 
-    * a really useful [utility-library](https://lodash.com/), but you don't have to include the whole thing, use cherrypicking for example
+    * a really useful [utility-library](https://lodash.com/), but you don't have to include the whole thing, use cherry-picking for example
 
 ```
 const get = require('lodash/get');
 ```
-
-Move on to change your package-name in **package.json**. 
 
 
 ## Usage
