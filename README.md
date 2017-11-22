@@ -40,7 +40,7 @@ Also, the consumer should be able to access the library the following ways:
 * **CommonJS module**
 * **Global variable**, when included through script tag.
 
-## Install & Usage
+## Install
 
 ### Setup your module-skeleton
 
@@ -100,6 +100,7 @@ const get = require('lodash/get');
 Move on to change your package-name in **package.json**. 
 
 
+## Usage
 
 ### Write your module
 
@@ -230,6 +231,7 @@ The consumer also can use the library by loading it via a script tag:
   * **watch** - watch the src-directory
   * **prod** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
   * **test** - mocha & chai tests 
+  * **prepublish** - run test before publish
  
 
 ## Running tests
