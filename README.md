@@ -42,9 +42,9 @@ Also, the consumer should be able to access the library the following ways:
 
 ## Install
 
-You can decide how to install the skeleton, via
+You can decide how to install the skeleton, via **npm** or **git**
 
-**npm** 
+### npm 
 
 ```sh
 git clone https://github.com/piccard21/npm-es6-webpack-skeleton.git
@@ -54,9 +54,7 @@ npm i
  ```   
 
 
-or 
-
-**git** 
+### git
 
 ```sh
 npm init -y 
@@ -255,7 +253,7 @@ The consumer also can use the library by loading it via a script tag:
   * **watch** - watch the src-directory
   * **prod** - create dist/app.js in a minified version, where tree-shaking is triggered as well 
   * **test** - mocha & chai tests 
-  * **prepublish** - run test before publish
+  * **prepublish** - run tests before publishing
  
 
 ## Running tests
