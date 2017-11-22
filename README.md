@@ -72,7 +72,6 @@ Now check if everything went ok. Herefor you've got some possibilities:
     * an html-page should open 
     * your bundle will be automatically injected
     * the bundle is notified when a change has happened
-    * rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app
 
 ```sh 
 npm start
@@ -128,7 +127,7 @@ const libraryTarget = 'umd';
     * the title of the development-server page
 
 * includeLodash 
-    * a really nice [utility-library](https://lodash.com/), but you don't have to include the whole thing, you can use cherry-picking for example
+    * a really nice [utility-library](https://lodash.com/), but you don't have to import/require the whole thing, you can use cherry-picking as well
 
 ```
 const get = require('lodash/get');
@@ -276,8 +275,6 @@ The consumer also can use the library by loading it via a script tag:
  
 
 ## Running tests
-
-Install dev dependencies:
 
 ```sh
 npm i 
