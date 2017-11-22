@@ -14,11 +14,11 @@ Install with [npm](https://www.npmjs.com/)
 * minifying
 	* Tree-Shaking
 * hot development-server
-	* Hot module replacement
-	* webpage is automatically created
-	* use of a template 
-    * modify **index.ejs** for your needs
-    * Bootstrap is preconfigured
+    * Hot module replacement
+    * webpage is automatically created
+    * use of a template 
+        * modify **index.ejs** for your needs
+        * Bootstrap is preconfigured
 * clean dist-directory before recompiling
 * configuration-file in **config/app.js**
 * if wanted:
