@@ -75,13 +75,14 @@ npm test
 ```
 
 *  webpack-dev-server, with hot-module-replacemnt enabled
-    * the bundle is notified when a change has happened. Rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app.
+    * an html-page should open where 
+    * the bundle is notified when a change has happened. 
+    * rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app.
 
 ```sh 
 npm start
 ```   
-
-    * An html-page should open now. 
+ 
 
 * development-mode:
 
