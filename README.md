@@ -98,7 +98,7 @@ npm run watch
 
 ### Configuration
 
-In **config/app.js** you have some options for basic configuration, like the library's variable-name, output-file-name, if you wanna have a sourcemap or your [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle or enable polyfills. **htmlTitle** is the title of the development-server page.
+In **config/app.js** you have some options for basic configuration:
 
 ```
 const libraryVarName = 'npmEs6WebpackSkeleton';
@@ -111,15 +111,32 @@ const libraryTarget = 'umd';
 ```
 
 
-* polyfills
-    * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
-    * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
-* lodash 
-    * a really useful [utility-library](https://lodash.com/), but you don't have to include the whole thing, use cherry-picking for example
+* libraryVarName
+    * the public variable-name you can reach the bundle, i.e. in a script-tag
+
+* libraryFileName
+    * filename for the bundle
+
+* sourcemap
+    * output sourcefiles for js & css
+
+* htmlTitle
+    * the title of the development-server page
+
+* includeLodash 
+    * a really nice [utility-library](https://lodash.com/), but you don't have to include the whole thing, you can use cherry-picking for example
 
 ```
 const get = require('lodash/get');
 ```
+
+* enablePolyFill
+    * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
+    * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
+
+* libraryTarget
+    * **umd** is the default: available after AMD or CommonJS require  
+    * see [here](https://webpack.js.org/guides/author-libraries/) for more information 
 
 
 ## Usage
