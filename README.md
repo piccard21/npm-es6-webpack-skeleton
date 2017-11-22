@@ -68,16 +68,10 @@ npm i
 
 Now check if everything went ok. Herefor you've got some possibilities:
 
-* testing
-
-```sh
-npm test
-```
-
 *  webpack-dev-server, with hot-module-replacemnt enabled
     * an html-page should open 
-    * the bundle is notified when a change has happened.
-    * rather than a full page reload, a Hot Module Replacement runtime loads the updated modules and inject them into a running app
+    * your bundle will be automatically injected
+    * the bundle is notified when a change has happened
 
 ```sh 
 npm start
@@ -86,7 +80,7 @@ npm start
 
 * development-mode:
 
-```   
+```sh   
 npm run dev
 ```   
 
@@ -96,9 +90,18 @@ npm run dev
 npm run watch
 ```
 
+* testing 
+
+```sh
+npm run dev
+npm test
+```
+
+
+
 ### Configuration
 
-In **config/app.js** you have some options for basic configuration, like the library's variable-name, output-file-name, if you wanna have a sourcemap or your [target](https://webpack.js.org/guides/author-libraries/), which is **umd** per default. Also you can decide if you wanna include lodash in your bundle or enable polyfills. **htmlTitle** is the title of the development-server page.
+In **config/app.js** you have some options for basic configuration:
 
 ```
 const libraryVarName = 'npmEs6WebpackSkeleton';
@@ -111,15 +114,32 @@ const libraryTarget = 'umd';
 ```
 
 
-* polyfills
-    * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
-    * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
-* lodash 
-    * a really useful [utility-library](https://lodash.com/), but you don't have to include the whole thing, use cherry-picking for example
+* libraryVarName
+    * the public variable-name you can reach the bundle, i.e. in a script-tag
+
+* libraryFileName
+    * filename for the bundle
+
+* sourcemap
+    * output sourcefiles for js & css
+
+* htmlTitle
+    * the title of the development-server page
+
+* includeLodash 
+    * a really nice [utility-library](https://lodash.com/), but you don't have to import/require the whole thing, you can use cherry-picking as well
 
 ```
 const get = require('lodash/get');
 ```
+
+* enablePolyFill
+    * babel-polyfill allows you to use the full set of ES6 features beyond syntax changes. This includes features such as new built-in objects like Promises and WeakMap, as well as new static methods like Array.from or Object.assign.
+    * Without babel-polyfill, babel only allows you to use features like arrow functions, destructuring, default arguments, and other syntax-specific features introduced in ES6.
+
+* libraryTarget
+    * **umd** is the default: available after AMD or CommonJS require  
+    * see [here](https://webpack.js.org/guides/author-libraries/) for more information 
 
 
 ## Usage
@@ -143,9 +163,7 @@ import * as pointLib from './lib/class.Point.js';
 // import some css & sass
 import './css/styles-01.css'; 
 import './css/styles-02.css'; 
-import './css/styles-03.css'; 
-import './sass/sass-01.scss';
-import './sass/sass-02.scss'; 
+import './sass/sass.scss';  
 
 // are we in development-mode?
 if (process.env.NODE_ENV !== 'production') {
@@ -257,8 +275,6 @@ The consumer also can use the library by loading it via a script tag:
  
 
 ## Running tests
-
-Install dev dependencies:
 
 ```sh
 npm i 

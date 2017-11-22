@@ -32,8 +32,8 @@
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col col-md-4">
-                    <div class="card" style="width: 20rem;">
-                        <img alt="Card image cap" class="card-img-top" src="http://lorempixel.com/400/200/sports/">
+                    <div id="c01" class="card" style="width: 20rem;">
+                        <img alt="Card image cap" class="card-img-top" src="http://pipsum.com/200x220.jpg">
                             <div class="card-block">
                                 <h4 class="card-title">
                                     Card title
@@ -65,8 +65,8 @@
                     </div>
                 </div>
                 <div class="col col-md-4">
-                    <div class="card" style="width: 20rem;">
-                        <img alt="Card image cap" class="card-img-top" src="http://lorempixel.com/400/200/nightlife/">
+                    <div id="c02" class="card" style="width: 20rem;">
+                        <img alt="Card image cap" class="card-img-top" src="http://pipsum.com/210x220.jpg">
                             <div class="card-block">
                                 <h4 class="card-title">
                                     Card title
@@ -98,8 +98,8 @@
                     </div>
                 </div>
                 <div class="col col-md-4">
-                    <div class="card" style="width: 20rem;">
-                        <img alt="Card image cap" class="card-img-top" src="http://lorempixel.com/400/200/nature/">
+                    <div id="c03" class="card" style="width: 20rem;">
+                        <img alt="Card image cap" class="card-img-top" src="http://pipsum.com/300x220.jpg">
                             <div class="card-block">
                                 <h4 class="card-title">
                                     Card title
@@ -132,5 +132,11 @@
                 </div>
             </div>
         </div>
+        <script> 
+            $(function() {
+                $('#c01 .card-title, #c02 .card-title, #c03 .card-title').text(npmEs6WebpackSkeleton.hello());
+                $('#c01 .card-text, #c02 .card-text, #c03 .card-text').text(window.npmEs6WebpackSkeleton.print());
+            })
+        </script>
     </body>
 </html>
