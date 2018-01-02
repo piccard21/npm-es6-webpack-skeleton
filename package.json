@@ -1,9 +1,9 @@
 {
   "name": "npm-es6-webpack-skeleton",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A simple skeleton for npm-module-development with ES6, based on webpack.",
   "author": "Andreas Stephan <info@cafe-serendipity.com> (cafe-serendipity.com)",
-  "main": "dist/app.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha --reporter spec",
     "dev": "npm run development",
